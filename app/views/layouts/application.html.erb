@@ -12,12 +12,23 @@
     <div class="nav navbar navbar-default">
       <div class="container">
         <div class="navbar-brand">
-          <%= link_to "Recipe Box", root_path %>
+          <%= link_to "Muse", root_path %>
+          <%= link_to "Recipe Box", recipes_path, class: "nav-recipe_box" %>
         </div>
         <% if user_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "New Recipe", new_recipe_path %></li>
-            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
+            <li class='dropdown'>
+              <a href='#' class='dropdown-toggle' data-toggle='dropdown'>
+              Hello,
+              <%= current_user.name %>
+              <b class='caret'></b>
+            </a>
+              <ul class='dropdown-menu'>
+              <li><%= link_to current_user.name, edit_user_registration_path %></li>
+              <li><%= link_to "Add New Inspiration", new_post_path, class: "button" %></li>
+              <li><%= link_to "New Recipe", new_recipe_path %></li>
+              </ul>
+            </li>
           </ul>
         <% else %>
           <ul class="nav navbar-nav navbar-right">
