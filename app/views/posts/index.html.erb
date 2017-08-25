@@ -1,7 +1,10 @@
 <% @posts.each do |post| %>
 
-  <%= image_tag (post.image.url(:small))%>
+  <%= link_to post_path(post) do %>
+    <%= image_tag (post.image.url(:small))%>
+  <% end %>
   <h2><%= link_to post.title, post%></h2>
+  <p><%= post.comments.count %> Comments</p>
 <% end %>
 
 <%= link_to "Add New Inspiration", new_post_path %>
