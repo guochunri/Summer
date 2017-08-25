@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  # RECIPES
   resources :recipes
 
+  # MUSE
   resources :posts do
+    member do
+      get "like", to: "posts#upvote"
+      get "dislike", to: "posts#downvote"
+    end
     resources :comments
   end
 
