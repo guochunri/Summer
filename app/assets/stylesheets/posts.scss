@@ -1,3 +1,12 @@
+.button {
+	border: 1px solid #9B9B9B;
+	padding: .7rem 1.25rem;
+	border-radius: .3rem;
+	outline: none;
+	background: white;
+	color: #9B9B9B;
+}
+
 #post_show {
   padding-top: 2rem;
 
@@ -59,6 +68,13 @@
         img {
           width: 100%;
           border-radius: 0.3rem 0.3rem 0 0;
+          -webkit-transition: all .3s ease-out;
+      	  -moz-transition: all .3s ease-out;
+      	  -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+      		&:hover {
+      			transform: scale(1.075);
+      		}
         }
       }
 

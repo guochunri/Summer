@@ -27,8 +27,9 @@
             </a>
               <ul class='dropdown-menu'>
               <li><%= link_to current_user.name, edit_user_registration_path %></li>
-              <li><%= link_to "Add New Inspiration", new_post_path, class: "button" %></li>
+              <li><%= link_to "Add New Inspiration", new_post_path %></li>
               <li><%= link_to "New Recipe", new_recipe_path %></li>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
               </ul>
             </li>
           </ul>
