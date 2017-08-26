@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :todo_lists
   devise_for :users
 
   # RECIPES
@@ -13,5 +14,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  root "posts#index"
+  # TODO_LISTS
+  resources :todo_lists
+
+  root "todo_lists#index"
 end
