@@ -15,6 +15,7 @@
       <div class="container">
         <div class="navbar-brand">
           <%= link_to "Muse", root_path %>
+          <%= link_to "To Do List", todo_lists_path, class: "nav-to_do_list" %>
           <%= link_to "Recipe Box", recipes_path, class: "nav-recipe_box" %>
         </div>
         <% if user_signed_in? %>

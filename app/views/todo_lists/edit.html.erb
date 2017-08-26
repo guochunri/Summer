@@ -1,9 +1,17 @@
-<h1 class="todo_list_title">Edit Todo List</h1>
-
-<div class="forms">
-  <%= render 'form', todo_list: @todo_list %>
-</div>
-
-<div class="links">
-  <%= link_to 'Cancel', todo_lists_path %>
+<div class="col-md-8 col-md-offset-2">
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h2 class="todo_list_title">Edit Todo List</h2>
+    </div>
+    <div class="panel-body">
+      <div class="forms">
+        <%= render 'form', todo_list: @todo_list %>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <div class="links">
+        <%= link_to 'Cancel', todo_lists_path %>
+      </div>
+    </div>
+  </div>
 </div>

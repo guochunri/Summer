@@ -23,5 +23,5 @@ Rails.application.routes.draw do
     end
   end
 
-  root "todo_lists#index"
+  root "posts#index"
 end

@@ -29,7 +29,7 @@
 
   body {
     font-family: "Proxima Nova";
-    font-weight: 100;
+    font-weight: 300;
   	background: rgb(235, 238, 243);
   }
 
@@ -73,6 +73,9 @@
   		a {
   			color: $red;
   		}
+      .nav-to_do_list {
+        margin-left: 15px;
+      }
       .nav-recipe_box {
         margin-left: 15px;
       }
